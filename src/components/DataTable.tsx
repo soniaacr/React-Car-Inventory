@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Button from "./Button"
 import Modal from "./Modal"
+import { server_calls } from '../api/server';
+
 
 function DataTable() {
     let [ open, setOpen ] = useState(false);
@@ -12,7 +14,10 @@ function DataTable() {
     const handleClose = () => {
         setOpen(false)
     }
-
+    
+    const getData = () => {
+        console.log(server_calls.get())
+    }
 
   return (
     <>
@@ -33,6 +38,7 @@ function DataTable() {
             <Button className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" >Delete</Button>
         </div>
         {/* Data Table section */}
+        <button onClick={getData}>get data</button>
     </>
   )
 }
