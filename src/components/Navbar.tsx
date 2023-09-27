@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 import { signInWithPopup, signOut } from 'firebase/auth'
-import { auth, Providers } from '../config/firebase'
+import { auth, provider} from '../config/firebase'
 
 function Navbar() {
     const [isVisible, setIsVisible] = useState(false)
@@ -13,7 +13,7 @@ function Navbar() {
     }
 
     const signInOnClick = async () => {
-        const response  = await signInWithPopup(auth, Providers.google);
+        const response  = await signInWithPopup(auth, provider);
         if ( response.user ) {
             location.reload();
         }

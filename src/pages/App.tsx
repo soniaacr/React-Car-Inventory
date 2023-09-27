@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import routes from '../config/routes'
 import { Provider } from 'react-redux'
