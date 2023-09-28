@@ -29,7 +29,7 @@ const CarForm = (props:CarFormProps) => {
       dispatch(chooseYear(data.year));
       dispatch(chooseColor(data.color));
       server_calls.create(store.getState());
-      setTimeout( () => {window.location.reload()}, 1000)
+      setTimeout( () => {window.location.reload()}, 10000)
       }
   }
 
